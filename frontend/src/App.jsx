@@ -89,7 +89,7 @@ const [loginData, setLoginData] =
     try {
 
       const response = await axios.get(
-        "http://127.0.0.1:5000/get-goals/1"
+        "https://atomquest-backend-suur.onrender.comhttps://atomquest-backend-suur.onrender.com/get-goals/1"
       );
 
       setGoals(response.data);
@@ -109,7 +109,7 @@ const [loginData, setLoginData] =
     try {
 
       await axios.put(
-        `http://127.0.0.1:5000/approve-goal/${goalId}`,
+        `https://atomquest-backend-suur.onrender.com/approve-goal/${goalId}`,
         {
           manager_id: 2
         }
@@ -134,7 +134,7 @@ const [loginData, setLoginData] =
       const data = progressData[goalId];
 
       await axios.post(
-        "http://127.0.0.1:5000/update-progress",
+        "https://atomquest-backend-suur.onrender.com/update-progress",
         {
           goal_id: goalId,
           employee_id: 1,
@@ -158,7 +158,7 @@ const [loginData, setLoginData] =
   try {
 
     const response = await axios.post(
-      "http://127.0.0.1:5000/login",
+      "https://atomquest-backend-suur.onrender.com/login",
       loginData
     );
 
@@ -182,7 +182,7 @@ const [loginData, setLoginData] =
     try {
 
       const response = await axios.post(
-        "http://127.0.0.1:5000/create-goal",
+        "https://atomquest-backend-suur.onrender.com/create-goal",
         {
           ...formData,
           target_value: Number(formData.target_value),
